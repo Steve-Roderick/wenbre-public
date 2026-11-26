@@ -1,0 +1,5 @@
+{
+  "rooms": [
+    { "id": "game-night", "name": "Game Night", "timezone": "America/Toronto" }
+  ]
+}

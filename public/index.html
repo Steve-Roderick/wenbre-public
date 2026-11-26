@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="referrer" content="no-referrer">
+  <meta name="theme-color" content="#080d0b">
+  <title>Game Night · still here</title>
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/style.css">
+  <script type="module" src="/app.js"></script>
+</head>
+<body>
+  <div class="page">
+    <header class="masthead">
+      <a class="wordmark" href="/" aria-label="Game Night home"><span class="seal" aria-hidden="true">&gt;_</span><span>~/game-night<span class="wordmark-sub">last seen: allegedly</span></span></a>
+      <span class="edition">TTY/10 · IDLE</span>
+    </header>
+    <main>
+      <section id="entry" class="entry" aria-labelledby="entry-title">
+        <span class="eyebrow">~/ last seen recently</span>
+        <h1 id="entry-title">still here.<br>you?<span aria-hidden="true">_</span></h1>
+        <p id="entry-message">connection pending. the group chat has the link.</p>
+        <div class="entry-mark" aria-hidden="true">[ no carrier ]</div>
+        <p class="quiet">ten days. ten ghosts. allegedly a plan.</p>
+      </section>
+      <section id="room" hidden aria-labelledby="room-title">
+        <div id="locked-in" class="locked-in" role="status" aria-live="polite" aria-atomic="true" hidden></div>
+        <div class="room-heading">
+          <div><span class="eyebrow">~/plans / pending</span><h1 id="room-title">Game Night</h1><p id="date-range" class="date-range"></p></div>
+          <div class="refresh-area"><button id="refresh" class="button" type="button">↻ <span>Refresh</span></button><p id="last-refreshed">Not yet refreshed</p></div>
+        </div>
+        <div class="instructions"><span><span class="instruction-number">01</span> Add your name</span><span><span class="instruction-number">02</span> Choose Yes, No, or Maybe</span><span><span class="instruction-number">03</span> Star a game night</span></div>
+        <div id="calendar-shell" class="calendar-shell" tabindex="0" role="region" aria-label="Ten-day availability calendar">
+          <table id="calendar"><caption class="sr-only">Shared availability for the next ten days. Anyone in the room can edit any row.</caption><thead></thead><tbody></tbody><tfoot></tfoot></table>
+        </div>
+        <div id="empty" class="empty" hidden><p>Nobody’s here yet.</p><span>Add your name to get started.</span></div>
+        <div class="below-calendar"><span id="people-count"></span><span class="legend"><span class="yes-legend"><span class="legend-symbol">✓</span>Yes</span><span class="no-legend"><span class="legend-symbol">X</span>No</span><span class="maybe-legend"><span class="legend-symbol">~</span>Maybe</span><span><span class="legend-symbol">□</span>Blank</span><span><span class="legend-symbol">☆</span>Game night</span></span></div>
+        <form id="join-form" class="join-form">
+          <label for="name">Add your name</label>
+          <div class="join-controls"><input id="name" name="name" autocomplete="nickname" placeholder="Your name" required maxlength="80" aria-describedby="join-hint"><button id="join" class="button primary" type="submit">Add participant <span aria-hidden="true">＋</span></button></div>
+          <p id="join-hint" class="quiet">10 people max. Everyone with this link can edit.</p>
+        </form>
+      </section>
+      <dialog id="response-picker" aria-labelledby="response-title">
+        <h2 id="response-title"></h2>
+        <div id="response-options"></div>
+        <button id="response-cancel" class="button" type="button">Cancel</button>
+      </dialog>
+      <div id="notice" class="notice" hidden role="alert"><span id="notice-message"></span><button id="retry" class="button" type="button" hidden>Try again</button><button id="dismiss" class="dismiss" type="button" aria-label="Dismiss message">×</button></div>
+      <div id="save-errors" class="notice" hidden role="alert"><span id="save-error-message"></span><button id="retry-saves" class="button" type="button">Retry changes</button></div>
+      <p id="save-status" class="save-status" role="status" aria-live="polite"></p>
+    </main>
+    <footer><span>“we should do this more.” — 2021</span><span>Keep your room link among friends. Forwarding it grants full access.</span></footer>
+  </div>
+</body>
+</html>
