@@ -4,6 +4,10 @@ Ten days, ten friends, one table. A small shared availability calendar made with
 
 The room's timezone determines today. Each edit saves immediately. **Refresh** loads other people's changes; there is no polling. The design uses a dark terminal palette, green monospace text, and understated phosphor accents. On phones, dates run down the calendar, participant names stack vertically across the top, and stars sit on the left. Date labels and name headers stay visible while scrolling a crowded room. Wider screens use participant rows and date columns.
 
+| Desktop | Mobile |
+| --- | --- |
+| ![Game Night desktop view showing four participants with Yes, No, Maybe, and Blank responses and a starred game night](docs/screenshot.png) | <img src="docs/screenshot-mobile.png" alt="Game Night mobile view with vertical participant headers, left-side stars, and day rows" width="210"> |
+
 ## Local setup
 
 Requires Node.js 22.13+ (Node 22 LTS recommended), npm, and an environment that permits Wrangler to start a local server. No Cloudflare account is needed for local D1.
